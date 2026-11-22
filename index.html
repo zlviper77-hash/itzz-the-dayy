@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#160d19"><title>For You, Always</title>
+<style>
+:root{--bg:#100b14;--card:#1b1220;--rose:#f2a9bb;--cream:#fff2e8;--muted:#c8b5c3;--line:#39253a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#342033 0,var(--bg) 55%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;min-height:100vh;overflow-x:hidden}button{font:inherit}.wrap{width:min(720px,92vw);margin:auto;padding:40px 0 70px}.eyebrow{font:12px system-ui;letter-spacing:.22em;text-transform:uppercase;color:var(--rose)}h1{font-size:clamp(2.6rem,11vw,5.1rem);line-height:.98;font-weight:400;margin:14px 0 22px}h2{font-size:2rem;font-weight:400;margin:0 0 18px}.intro{text-align:center;padding:40px 10px 30px}.intro p{color:var(--muted);font-size:1.08rem;line-height:1.7;max-width:490px;margin:0 auto}.btn{border:1px solid #82556b;background:transparent;color:var(--cream);border-radius:999px;padding:13px 22px;margin-top:24px;cursor:pointer;transition:.25s}.btn:hover{background:#42283d;transform:translateY(-2px)}.heart{color:#e889a5;display:inline-block;animation:pulse 1.8s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.18)}}.section{margin:26px 0;padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(140deg,rgba(42,26,43,.86),rgba(19,13,23,.9));box-shadow:0 18px 55px #0002}.section p{font-size:1.06rem;line-height:1.85;color:#f0dce6;margin:0}.name{color:var(--rose);font-style:italic}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.photo{aspect-ratio:3/4;border:1px dashed #8e6077;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#251729;color:#c9a8ba;text-align:center;font:13px system-ui;position:relative}.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo span{padding:8px}.small{font:13px system-ui;color:var(--muted);margin-top:12px}.reveal{display:none;margin-top:18px;padding:20px;border-radius:16px;background:#2a1b2a;border:1px solid #61405b}.reveal.show{display:block;animation:fade .5s ease}.reveal p{line-height:1.8}.signature{color:var(--rose);font-style:italic;margin-top:15px}.final{text-align:center}.footer{text-align:center;color:#9c8499;font:12px system-ui;padding-top:28px}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}.floating{position:fixed;bottom:-25px;color:#e99bb4;opacity:.45;pointer-events:none;animation:rise linear forwards}@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}@media(max-width:520px){.wrap{padding-top:20px}.section{padding:22px}.photos{gap:7px}.intro{padding-top:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="intro">
+<div class="eyebrow">a little something, just for you</div>
+<h1>Happy Birthday,<br><span class="name">Keerthi</span> <span class="heart">♥</span></h1>
+<p>Not the biggest gift in the world. Just a little piece of my heart you can open whenever you want.</p>
+<button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open your letter ↓</button>
+</header>
+<section class="section" id="letter">
+<div class="eyebrow">from me, to you</div><h2>My favourite person</h2>
+<p>Happy birthday to my favourite person ❤️ I still don’t know how I got this lucky to have you but I’m genuinely so glad I did. Nee en life la vandhadhuku apram everything changed in the best way and I don’t think you even realise how much you mean to me. I trust you more than anyone and naan vera yaar kittayum ivlo open ah iruka maaten. Un kitta mattum dhaan ivlo pesuven and I can be as childish as I want without thinking twice. Before you came into my life I was honestly so lethargic about my future but after meeting you I genuinely started wanting to do something with my life and become someone who makes you and my family proud. Long distance naala neraya things miss panrom but that doesn't change how much I love you. I just want to see you happy and give you everything you deserve. Enakku nee romba special di and I love you the most. ❤️</p>
+</section>
+<section class="section">
+<div class="eyebrow">little moments</div><h2>Us, in our own little world</h2>
+<div class="photos"><label class="photo"><span>Tap to add<br>our photo 1<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label><label class="photo"><span>Tap to add<br>our photo 2<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label><label class="photo"><span>Tap to add<br>our photo 3<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label></div>
+<p class="small"></p>
+</section>
+<section class="section">
+<div class="eyebrow">just in case</div><h2>Open when you miss me</h2>
+<p>Distance is annoying and I wish we could skip it sometimes. But even on days we can't be together I hope you never forget how loved you are. Naan inga dhaan irukken — cheering for you, annoying you, and loving you from wherever I am. ❤️</p>
+</section>
+<section class="section final">
+<div class="eyebrow">one last thing</div><h2>There's a little more...</h2>
+<button class="btn" onclick="document.getElementById('surprise').classList.toggle('show');this.textContent=this.textContent.includes('Open')?'Close surprise':'Open your surprise ♥'">Open your surprise ♥</button>
+<div class="reveal" id="surprise"><p>Whatever happens and wherever life takes us, I hope you keep choosing happiness and keep believing in yourself. I’m proud of you and I’m rooting for every dream you have. And selfishly… I hope I get to be part of a lot more birthdays with you. 🤍</p><div class="signature">Always yours (and still your most annoying person)</div></div>
+</section>
+<div class="footer">made with love · <span class="heart">♥</span></div>
+</div>
+<script>
+function showPhoto(input){if(!input.files||!input.files[0])return;const box=input.closest('.photo');let old=box.querySelector('img');if(old)old.remove();const img=document.createElement('img');img.src=URL.createObjectURL(input.files[0]);img.alt='Added memory';box.appendChild(img);box.querySelector('span').style.display='none';}
+function floatHeart(){const h=document.createElement('div');h.className='floating';h.textContent=['♥','♡','✦'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(12+Math.random()*20)+'px';h.style.animationDuration=(7+Math.random()*6)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),14000)}setInterval(floatHeart,1300);
+</script>
+</body></html>
