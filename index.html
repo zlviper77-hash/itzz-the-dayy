@@ -14,16 +14,17 @@
 <div class="eyebrow">a little something, just for you</div>
 <h1>Happy Birthday,<br><span class="name">Keerthi</span> <span class="heart">♥</span></h1>
 <p>Not the biggest gift in the world. Just a little piece of my heart you can open whenever you want.</p>
-<button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Open your letter ↓</button>
+<button class="btn" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Find your letter ↓</button>
 </header>
 <section class="section" id="letter">
 <div class="eyebrow">from me, to you</div><h2>My favourite person</h2>
-<p>Happy birthday to my favourite person ❤️ I still don’t know how I got this lucky to have you but I’m genuinely so glad I did. Nee en life la vandhadhuku apram everything changed in the best way and I don’t think you even realise how much you mean to me. I trust you more than anyone and naan vera yaar kittayum ivlo open ah iruka maaten. Un kitta mattum dhaan ivlo pesuven and I can be as childish as I want without thinking twice. Before you came into my life I was honestly so lethargic about my future but after meeting you I genuinely started wanting to do something with my life and become someone who makes you and my family proud. Long distance naala neraya things miss panrom but that doesn't change how much I love you. I just want to see you happy and give you everything you deserve. Enakku nee romba special di and I love you the most. ❤️</p>
+<button class="btn" id="letterBtn" onclick="document.getElementById('letterText').classList.toggle('show');this.textContent=this.textContent.includes('Open')?'Close my letter ♥':'Open your letter ♥'">Open your letter ♥</button>
+<div class="reveal" id="letterText"><p>Happy birthday to my favourite person ❤️ I still don’t know how I got this lucky to have you but I’m genuinely so glad I did. Nee en life la vandhadhuku apram everything changed in the best way and I don’t think you even realise how much you mean to me. I trust you more than anyone and naan vera yaar kittayum ivlo open ah iruka maaten. Un kitta mattum dhaan ivlo pesuven and I can be as childish as I want without thinking twice. Before you came into my life I was honestly so lethargic about my future but after meeting you I genuinely started wanting to do something with my life and become someone who makes you and my family proud. Long distance naala neraya things miss panrom but that doesn't change how much I love you. I just want to see you happy and give you everything you deserve. Enakku nee romba special di and I love you the most. ❤️</p></div>
 </section>
 <section class="section">
 <div class="eyebrow">little moments</div><h2>Us, in our own little world</h2>
-<div class="photos"><label class="photo"><span>Tap to add<br>our photo 1<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label><label class="photo"><span>Tap to add<br>our photo 2<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label><label class="photo"><span>Tap to add<br>our photo 3<input hidden type="file" accept="image/*" onchange="showPhoto(this)"></span></label></div>
-<p class="small"></p>
+<div class="photos"><div class="photo"><img src="photo1.jpeg" alt="Our memory 1"></div><div class="photo"><img src="photo2.jpeg" alt="Our memory 2"></div><div class="photo"><img src="photo3.jpeg" alt="Our memory 3"></div></div>
+<p class="small">. ❤️</p>
 </section>
 <section class="section">
 <div class="eyebrow">just in case</div><h2>Open when you miss me</h2>
@@ -37,7 +38,6 @@
 <div class="footer">made with love · <span class="heart">♥</span></div>
 </div>
 <script>
-function showPhoto(input){if(!input.files||!input.files[0])return;const box=input.closest('.photo');let old=box.querySelector('img');if(old)old.remove();const img=document.createElement('img');img.src=URL.createObjectURL(input.files[0]);img.alt='Added memory';box.appendChild(img);box.querySelector('span').style.display='none';}
 function floatHeart(){const h=document.createElement('div');h.className='floating';h.textContent=['♥','♡','✦'][Math.floor(Math.random()*3)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(12+Math.random()*20)+'px';h.style.animationDuration=(7+Math.random()*6)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),14000)}setInterval(floatHeart,1300);
 </script>
 </body></html>
